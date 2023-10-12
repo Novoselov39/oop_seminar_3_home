@@ -5,9 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 
 import oop.seminar_3.oop_seminar_3_home.Student;
-import oop.seminar_3.oop_seminar_3_home.StudentComparator;
 import oop.seminar_3.oop_seminar_3_home.StudentGroup;
 import oop.seminar_3.oop_seminar_3_home.Teacher;
+import oop.seminar_3.oop_seminar_3_home.UserComparator;
 
 
 
@@ -53,7 +53,7 @@ public class StudentGroupService {
 
     public List<Student> getSortedByFIOStudentGroup(){
         List<Student> students = new ArrayList<>(studentGroup.getStudentlist());
-        students.sort(new StudentComparator());
+        students.sort(new UserComparator<Student>());
         return students;
     }
 }
